@@ -8,7 +8,9 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to user_path(@user),
+binding.pry
+            redirect_to user_path(@user)
+        
         else
             redirect_to '/users/new'
         end
@@ -21,12 +23,10 @@ binding.pry
     private
 
     def find_user
-binding.pry
-        @user = User.find_by()
+        @user = User.find_by(id: params[:id])
     end
 
-
     def user_params
-        require(:user).permit(:name, :height, :happiness, :nausea, :tickets, :password, :admin)
+        require(:user).permit(:name, :height, :happiness, :nausea, :tickets, :password)
     end
 end
