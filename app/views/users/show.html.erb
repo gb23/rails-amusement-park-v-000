@@ -1,6 +1,6 @@
 <h1>Hi, <%= @user.name %></h1>
 <% if @user.admin %>
-    ADMIN
+    <p>ADMIN</p>
 <% end %>
 
 Name: <%= @user.name %> <br>
@@ -8,3 +8,6 @@ Mood: <%= @user.mood %> <br>
 
 Height: <%= @user.height %> <br>
 Tickets: <%= @user.tickets %> <br>
+
+
+<%= link_to "Log Out", signout_path %>
