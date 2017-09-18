@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    
+    before_action :find_user, only: [:show, :edit, :update, :destroy]
     def new
         @user = User.new
     end
@@ -15,10 +15,16 @@ class UsersController < ApplicationController
     end
 
     def show
-        
+binding.pry
     end
 
     private
+
+    def find_user
+binding.pry
+        @user = User.find_by()
+    end
+
 
     def user_params
         require(:user).permit(:name, :height, :happiness, :nausea, :tickets, :password, :admin)
