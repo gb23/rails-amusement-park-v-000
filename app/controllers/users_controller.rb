@@ -14,6 +14,18 @@ class UsersController < ApplicationController
         end
     end
 
+#     def edit
+# binding.pry
+#     end
+
+    def update
+        @user.
+
+
+        notice:  "Thanks for riding the #{@attraction.name}!"
+    end
+
+
     def show
         #@user is found from find_user method
         if session[:user_id] != @user.id

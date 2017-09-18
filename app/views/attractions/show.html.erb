@@ -1,0 +1,7 @@
+<%= "#{@attraction.name}" %>
+
+<%= form_for current_user do |f| %>
+    <%# <% flash[:notice] = "Thanks for riding the #{@attraction.name}!" %> 
+    <%= f.button "Go on this ride"%>
+<% end %>
+
