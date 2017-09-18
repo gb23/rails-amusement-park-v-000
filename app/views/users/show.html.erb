@@ -1,5 +1,7 @@
 <h1>Hi, <%= @user.name %></h1>
-<%= ADMIN if @user.admin %>
+<% if @user.admin %>
+    ADMIN
+<% end %>
 
 Name: <%= @user.name %> <br>
 Mood: <%= @user.mood %> <br>
