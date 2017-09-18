@@ -1,7 +1,9 @@
 <%= "#{@attraction.name}" %>
 
-<%= form_for  do |f| %>
+<%= form_tag rides_path do %>
     <%# <% flash[:notice] = "Thanks for riding the #{@attraction.name}!" %> 
-    <%= f.button "Go on this ride"%>
+    <%= hidden_field_tag 'attraction_id', @attraction.id %>
+    <%= button_tag "Go on this ride"%>
 <% end %>
+
 

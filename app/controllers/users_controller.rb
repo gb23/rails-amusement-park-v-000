@@ -18,12 +18,7 @@ class UsersController < ApplicationController
 # binding.pry
 #     end
 
-    def update
-        @user.
 
-
-        notice:  "Thanks for riding the #{@attraction.name}!"
-    end
 
 
     def show
