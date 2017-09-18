@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     end
 
     def show
-
+        #@user is found from find_user method
     end
 
     private
